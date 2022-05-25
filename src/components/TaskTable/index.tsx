@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "./styles";
 import { BiTrash } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
+import { api } from "../../service/api";
+
+interface Tasks {
+  id: number;
+  title: string;
+  task: string;
+  date: string;
+}
 
 export default function TaskTable() {
+  const [tasks, setTasks] = useState<Tasks[]>([]);
+
+  useEffect(() => {
+    api.get("tasks").then((response) => setTasks(response.data.tasks));
+  }, []);
+
   return (
     <Container>
       <table>
@@ -16,24 +30,19 @@ export default function TaskTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Compras</td>
-            <td>Comprar pão</td>
-            <td>21/12/2021</td>
-            <td>
-              <BiEdit />
-              <BiTrash />
-            </td>
-          </tr>
-          <tr>
-            <td>janta</td>
-            <td>Preparar uma janta especial</td>
-            <td>21/12/2021</td>
-            <td>
-              <BiEdit />
-              <BiTrash />
-            </td>
-          </tr>
+          {tasks.map((task) => (
+            <tr key={task.id}>
+              <td>{task.title}</td>
+              <td>{task.task}</td>
+              <td>
+                {new Intl.DateTimeFormat("pt-BR").format(new Date(task.date))}
+              </td>
+              <td>
+                <BiEdit />
+                <BiTrash />
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </Container>

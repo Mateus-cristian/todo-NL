@@ -4,6 +4,7 @@ export const Container = styled.div`
   max-width: 1120px;
   display: block;
   margin: 0 auto;
+  padding: 0 20px;
 
   .content {
     border-radius: 1rem;
