@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import TaskModal from "./components/TaskModal";
 import Modal from "react-modal";
+import { TaskContext, TasksProvider } from "./TasksContext";
 
 Modal.setAppElement("#root");
 function App() {
@@ -19,12 +20,12 @@ function App() {
   }
 
   return (
-    <>
+    <TasksProvider>
       <Header />
       <TaskList handleOpenModal={handleOpenModal} />
       <TaskModal isOpen={modalOpen} onRequestClose={handleCloseModal} />
       <GlobalStyle />
-    </>
+    </TasksProvider>
   );
 }
 

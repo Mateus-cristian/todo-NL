@@ -1,6 +1,6 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useState, useContext } from "react";
 import Modal from "react-modal";
-import { api } from "../../service/api";
+import { TaskContext } from "../../TasksContext";
 import { Container } from "./styles";
 
 interface ModalProps {
@@ -9,23 +9,24 @@ interface ModalProps {
 }
 
 export default function TaskModal({ isOpen, onRequestClose }: ModalProps) {
+  const { createTask } = useContext(TaskContext);
+
   const [title, setTitle] = useState("");
   const [task, setTask] = useState("");
-  const [date, setDate] = useState(new Date(""));
+  const [date, setDate] = useState("");
 
-  function handleCreateTask(event: FormEvent) {
+  async function handleCreateTask(event: FormEvent) {
     event.preventDefault();
-    const data = {
+
+    await createTask({
       title,
       task,
       date,
-    };
-
-    api.post("tasks", data);
+    });
 
     setTitle("");
     setTask("");
-    setDate(new Date(""));
+    setDate("");
     onRequestClose();
   }
 
@@ -53,7 +54,8 @@ export default function TaskModal({ isOpen, onRequestClose }: ModalProps) {
         <input
           type="date"
           placeholder="data"
-          onChange={(event) => setDate(new Date(event.target.value))}
+          value={date}
+          onChange={(event) => setDate(event.target.value)}
         />
         <button type="submit" onClick={handleCreateTask}>
           Enviar

@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Container } from "./styles";
 import { BiTrash } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
-import { api } from "../../service/api";
 
-interface Tasks {
-  id: number;
-  title: string;
-  task: string;
-  date: string;
+import { TaskContext } from "../../TasksContext";
+
+interface ModalProps {
+  isOpen: () => void;
 }
 
-export default function TaskTable() {
-  const [tasks, setTasks] = useState<Tasks[]>([]);
-
-  useEffect(() => {
-    api.get("tasks").then((response) => setTasks(response.data.tasks));
-  }, []);
+export default function TaskTable({ isOpen }: ModalProps) {
+  const { tasks } = useContext(TaskContext);
+  const { deleteTask } = useContext(TaskContext);
 
   return (
     <Container>
@@ -38,8 +33,8 @@ export default function TaskTable() {
                 {new Intl.DateTimeFormat("pt-BR").format(new Date(task.date))}
               </td>
               <td>
-                <BiEdit />
-                <BiTrash />
+                <BiEdit onClick={isOpen} />
+                <BiTrash onClick={() => deleteTask(task)} />
               </td>
             </tr>
           ))}

@@ -43,6 +43,8 @@ createServer({
 
       return schema.create("task", data);
     });
+
+    this.delete("tasks/:id");
   },
 });
 root.render(
