@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import TaskModal from "./components/TaskModal";
 import Modal from "react-modal";
-import { TaskContext, TasksProvider } from "./TasksContext";
+import { TasksProvider } from "./TasksContext";
 
 Modal.setAppElement("#root");
 function App() {

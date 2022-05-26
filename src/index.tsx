@@ -40,11 +40,10 @@ createServer({
 
     this.post("tasks", (schema, request) => {
       const data = JSON.parse(request.requestBody);
-
       return schema.create("task", data);
     });
 
-    this.delete("tasks/:id");
+    this.del("/tasks/:id");
   },
 });
 root.render(

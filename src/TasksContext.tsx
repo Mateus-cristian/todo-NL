@@ -1,6 +1,15 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+import { toast, ToastContainer } from "react-toastify";
 import { api } from "./service/api";
-
+import "react-toastify/dist/ReactToastify.min.css";
 interface Tasks {
   id: number;
   title: string;
@@ -17,7 +26,7 @@ interface TasksProvidersProps {
 interface TasksContextData {
   tasks: Tasks[];
   createTask: (Task: TasksProps) => Promise<void>;
-  deleteTask: (Task: Tasks) => Promise<void>;
+  removeTask: (id: number) => Promise<void>;
 }
 
 export const TaskContext = createContext<TasksContextData>(
@@ -36,22 +45,30 @@ export function TasksProvider({ children }: TasksProvidersProps) {
 
     const { task } = response.data;
 
+    toast.success("🦄 Tarefa Criada com Sucesso!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+
     setTasks([...tasks, task]);
   }
 
-  async function deleteTask(tasksInputs: Tasks) {
-    const response = await api.delete("tasks", {
-      params: {
-        id: tasksInputs.id,
-      },
-    });
-    const { task } = response.data;
+  async function removeTask(id: number) {
+    await api.delete(`/tasks/${id}`);
 
-    console.log(task);
+    const response = await api.get("/tasks");
+
+    setTasks(response.data.tasks);
   }
 
   return (
-    <TaskContext.Provider value={{ tasks, createTask, deleteTask }}>
+    <TaskContext.Provider value={{ tasks, createTask, removeTask }}>
+      <ToastContainer />
       {children}
     </TaskContext.Provider>
   );

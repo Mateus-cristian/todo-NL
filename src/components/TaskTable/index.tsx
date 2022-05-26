@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React, { FormEvent, useContext } from "react";
 import { Container } from "./styles";
 import { BiTrash } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
-
 import { TaskContext } from "../../TasksContext";
 
 interface ModalProps {
@@ -10,8 +9,11 @@ interface ModalProps {
 }
 
 export default function TaskTable({ isOpen }: ModalProps) {
-  const { tasks } = useContext(TaskContext);
-  const { deleteTask } = useContext(TaskContext);
+  const { tasks, removeTask } = useContext(TaskContext);
+
+  async function handleDeleteTask(taskId: number) {
+    removeTask(taskId);
+  }
 
   return (
     <Container>
@@ -34,7 +36,7 @@ export default function TaskTable({ isOpen }: ModalProps) {
               </td>
               <td>
                 <BiEdit onClick={isOpen} />
-                <BiTrash onClick={() => deleteTask(task)} />
+                <BiTrash onClick={() => handleDeleteTask(task.id)} />
               </td>
             </tr>
           ))}

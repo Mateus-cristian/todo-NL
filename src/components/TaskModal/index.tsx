@@ -1,5 +1,6 @@
 import React, { FormEvent, useState, useContext } from "react";
 import Modal from "react-modal";
+
 import { TaskContext } from "../../TasksContext";
 import { Container } from "./styles";
 
@@ -17,7 +18,6 @@ export default function TaskModal({ isOpen, onRequestClose }: ModalProps) {
 
   async function handleCreateTask(event: FormEvent) {
     event.preventDefault();
-
     await createTask({
       title,
       task,
