@@ -12,13 +12,14 @@ export const Container = styled.div`
 
     th {
       text-align: left;
+      color: ${(props) => props.theme.colors.th};
     }
 
     td {
       padding: 1rem 2rem 1rem 0;
       border: 0;
-      background-color: var(--shape);
-      color: var(--text-title);
+
+      color: ${(props) => props.theme.colors.td};
       border-radius: 0.25rem;
 
       &:last-child {

@@ -7,12 +7,12 @@ export const Container = styled.div`
 
   margin-top: 10px;
   bottom: 0;
-  background: var(--orange);
+  background: ${(props) => props.theme.colors.backgroundSecondary};
   align-items: center;
   left: 0;
   width: 100%;
 
   h3 {
-    color: #fff;
+    color: ${(props) => props.theme.colors.h3};
   }
 `;

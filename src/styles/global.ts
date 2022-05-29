@@ -20,22 +20,22 @@ export const GlobalStyle = createGlobalStyle`
 
     h2::selection {
         color: white;
-        background-color: var(--orange);
+        background-color: ${(props) => props.theme.colors.backgroundSecondary};
     }   
 
     span::selection {
-        color: var(--orange);
+        color: ${(props) => props.theme.colors.backgroundSecondary};
         background-color: white; 
     }
 
     th::selection{
         color: white;
-        background-color: var(--orange);
+        background-color: ${(props) => props.theme.colors.backgroundSecondary};
     }
 
     td::selection{
         color: white;
-        background-color: var(--orange);
+        background-color: ${(props) => props.theme.colors.backgroundSecondary};
     }
 
     *{  
@@ -64,8 +64,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background: var(--background);
+        background: ${(props) => props.theme.colors.backgroundBody};
         -webkit-font-smoothing: antialiased;
+        
     }
 
     button{
@@ -92,7 +93,7 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-content{
         width: 100%;
         max-width: 500px;
-        background-color: var(--background);
+        background-color: ${(props) => props.theme.colors.backgroundBody};
         padding: 3rem;
         position: relative;
         border-radius: 0.25rem;
@@ -111,16 +112,3 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     `;
-const lightTheme = {
-  body: "#e2e2e2",
-  text: "#363537",
-  toggleBorder: "#fff",
-  gradient: "linear-gradient(#39598A, #79D7ED)",
-};
-
-const darkTheme = {
-  body: "#363537",
-  text: "#FAFAFA",
-  toggleBorder: "#6B8096",
-  gradient: "linear-gradient(#091236, #1E215D)",
-};

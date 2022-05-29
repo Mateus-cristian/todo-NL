@@ -6,11 +6,19 @@ import TaskList from "./components/TaskList";
 import TaskModal from "./components/TaskModal";
 import Modal from "react-modal";
 import { TasksProvider } from "./TasksContext";
+import { ThemeProvider } from "styled-components";
+import light from "./styles/themes/light";
+import dark from "./styles/themes/dark";
 import Footer from "./components/Footer";
 
 Modal.setAppElement("#root");
 function App() {
   const [modalOpen, setOpenModal] = useState(false);
+  const [theme, setTheme] = useState(light);
+
+  function toggleTheme() {
+    setTheme(theme.title === "light" ? dark : light);
+  }
 
   function handleOpenModal() {
     setOpenModal(true);
@@ -21,17 +29,19 @@ function App() {
   }
 
   return (
-    <TasksProvider>
-      <Header />
-      <TaskList handleOpenModal={handleOpenModal} />
-      <TaskModal
-        isOpen={modalOpen}
-        onRequestClose={handleCloseModal}
-        text={"Cadastrar"}
-      />
-      <GlobalStyle />
-      <Footer />
-    </TasksProvider>
+    <ThemeProvider theme={theme}>
+      <TasksProvider>
+        <Header />
+        <TaskList handleOpenModal={handleOpenModal} />
+        <TaskModal
+          isOpen={modalOpen}
+          onRequestClose={handleCloseModal}
+          text={"Cadastrar"}
+        />
+        <GlobalStyle />
+        <Footer toggleTheme={toggleTheme} />
+      </TasksProvider>
+    </ThemeProvider>
   );
 }
 

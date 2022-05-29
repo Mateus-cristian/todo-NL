@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderApp = styled.header`
   height: 15.62rem;
   max-width: 100%;
-  background-color: var(--orange);
+  background-color: ${(props) => props.theme.colors.backgroundSecondary};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ export const HeaderApp = styled.header`
     gap: 0 20px;
     & span {
       font-size: 2rem;
-      color: var(--shape);
+      color: ${(props) => props.theme.colors.span};
       font-weight: 600;
     }
   }
