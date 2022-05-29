@@ -7,9 +7,9 @@
 
 # 📄 Instruções de Como rodar o projeto:
 
-### Se certifique de estrar com banco de dados MySql rodando na sua máquina,Abra o projeto e na Raíz do projeto existe um arquivo chamado todonl.sql importe o mesmo para a sua base de dados.
+#### Se certifique de estar com banco de dados MySql rodando na sua máquina,Abra o projeto e na Raíz do projeto existe um arquivo chamado todonl.sql importe o mesmo para a sua base de dados.
 
-### Apos isso,abra o terminal na pasta raíz e execute:
+#### Apos isso,abra o terminal na pasta raíz e execute:
 
 #### yarn install para instalar as dependências
 
