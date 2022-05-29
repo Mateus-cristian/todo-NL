@@ -14,7 +14,7 @@ export default function TaskList({ handleOpenModal }: ModalProps) {
           <h2>Minhas tarefas:</h2>
           <button onClick={handleOpenModal}>Criar tarefa</button>
         </header>
-        <TaskTable isOpen={handleOpenModal} />
+        <TaskTable />
       </div>
     </Container>
   );

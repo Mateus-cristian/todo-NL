@@ -23,7 +23,11 @@ function App() {
     <TasksProvider>
       <Header />
       <TaskList handleOpenModal={handleOpenModal} />
-      <TaskModal isOpen={modalOpen} onRequestClose={handleCloseModal} />
+      <TaskModal
+        isOpen={modalOpen}
+        onRequestClose={handleCloseModal}
+        text={"Cadastrar"}
+      />
       <GlobalStyle />
     </TasksProvider>
   );

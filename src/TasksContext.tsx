@@ -1,9 +1,7 @@
 import {
   createContext,
-  Dispatch,
+  FormEvent,
   ReactNode,
-  SetStateAction,
-  useContext,
   useEffect,
   useState,
 } from "react";
@@ -27,6 +25,7 @@ interface TasksContextData {
   tasks: Tasks[];
   createTask: (Task: TasksProps) => Promise<void>;
   removeTask: (id: number) => Promise<void>;
+  updatedTask: (task: Tasks) => Promise<void>;
 }
 
 export const TaskContext = createContext<TasksContextData>(
@@ -37,14 +36,14 @@ export function TasksProvider({ children }: TasksProvidersProps) {
   const [tasks, setTasks] = useState<Tasks[]>([]);
 
   useEffect(() => {
-    api.get("tasks").then((response) => setTasks(response.data.tasks));
+    api.get("tasks").then((response) => setTasks(response.data));
   }, []);
 
+  async function getTasks() {
+    await api.get("tasks").then((response) => setTasks(response.data));
+  }
+
   async function createTask(tasksInputs: TasksProps) {
-    const response = await api.post("tasks", tasksInputs);
-
-    const { task } = response.data;
-
     toast.success("🦄 Tarefa Criada com Sucesso!", {
       position: "top-right",
       autoClose: 2000,
@@ -54,20 +53,30 @@ export function TasksProvider({ children }: TasksProvidersProps) {
       draggable: true,
       progress: undefined,
     });
-
-    setTasks([...tasks, task]);
+    await api.post("tasks/post", tasksInputs).then(() => getTasks());
   }
 
   async function removeTask(id: number) {
-    await api.delete(`/tasks/${id}`);
+    await api.delete(`tasks/delete/${id}`).then(() => getTasks());
+  }
 
-    const response = await api.get("/tasks");
-
-    setTasks(response.data.tasks);
+  async function updatedTask(task: Tasks) {
+    toast.success("🦄 Tarefa Atualizada com Sucesso!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+    await api.put(`tasks/update/`, task).then(() => getTasks());
   }
 
   return (
-    <TaskContext.Provider value={{ tasks, createTask, removeTask }}>
+    <TaskContext.Provider
+      value={{ tasks, removeTask, updatedTask, createTask }}
+    >
       <ToastContainer />
       {children}
     </TaskContext.Provider>

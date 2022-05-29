@@ -4,6 +4,7 @@ export const Container = styled.div`
   max-width: 1120px;
   display: block;
   margin: 0 auto;
+  overflow-x: scroll;
 
   table {
     width: 100%;
@@ -27,6 +28,10 @@ export const Container = styled.div`
 
         svg {
           cursor: pointer;
+          &:hover {
+            filter: brightness(0) saturate(100%) invert(39%) sepia(61%)
+              saturate(7482%) hue-rotate(5deg) brightness(106%) contrast(102%);
+          }
         }
       }
     }

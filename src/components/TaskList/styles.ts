@@ -16,14 +16,26 @@ export const Container = styled.div`
     header {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      @media (max-width: 600px) {
+        justify-content: center;
+        flex-direction: column-reverse;
+      }
 
       h2 {
         color: var(--text-title);
+        flex: 0 0 300px;
         font-size: 2rem;
+        @media (max-width: 600px) {
+          flex: unset;
+          text-align: center;
+        }
       }
 
       button {
         background-color: var(--orange);
+
         font-size: 1.25rem;
         color: #fff;
         border: 0;

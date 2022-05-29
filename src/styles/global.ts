@@ -13,6 +13,26 @@ export const GlobalStyle = createGlobalStyle`
         --orange: #FF4001;
     }
 
+    h2::selection {
+        color: white;
+        background-color: var(--orange);
+    }   
+
+    span::selection {
+        color: var(--orange);
+        background-color: white; 
+    }
+
+    th::selection{
+        color: white;
+        background-color: var(--orange);
+    }
+
+    td::selection{
+        color: white;
+        background-color: var(--orange);
+    }
+
     *{  
         margin: 0;
         padding: 0;

@@ -1,15 +1,30 @@
-import React, { FormEvent, useContext } from "react";
+import React, { FormEvent, useContext, useState } from "react";
 import { Container } from "./styles";
 import { BiTrash } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
 import { TaskContext } from "../../TasksContext";
+import UpdateTaskModal from "../UpdateTaskModal";
 
-interface ModalProps {
-  isOpen: () => void;
+interface Tasks {
+  id: number;
+  title: string;
+  task: string;
+  date: string;
 }
 
-export default function TaskTable({ isOpen }: ModalProps) {
+export default function TaskTable() {
   const { tasks, removeTask } = useContext(TaskContext);
+  const [modalOpen, setOpenModal] = useState(false);
+  const [selectedTask, setSelectedTask] = useState<Tasks>({} as Tasks);
+
+  function updateTasks(tasks: Tasks) {
+    setSelectedTask(tasks);
+    setOpenModal(true);
+  }
+
+  function handleCloseModal() {
+    setOpenModal(false);
+  }
 
   async function handleDeleteTask(taskId: number) {
     removeTask(taskId);
@@ -17,6 +32,13 @@ export default function TaskTable({ isOpen }: ModalProps) {
 
   return (
     <Container>
+      <UpdateTaskModal
+        isOpen={modalOpen}
+        onRequestClose={handleCloseModal}
+        text={"Editar"}
+        task={selectedTask}
+        setTask={setSelectedTask}
+      />
       <table>
         <thead>
           <tr>
@@ -35,7 +57,7 @@ export default function TaskTable({ isOpen }: ModalProps) {
                 {new Intl.DateTimeFormat("pt-BR").format(new Date(task.date))}
               </td>
               <td>
-                <BiEdit onClick={isOpen} />
+                <BiEdit onClick={() => updateTasks(task)} />
                 <BiTrash onClick={() => handleDeleteTask(task.id)} />
               </td>
             </tr>
