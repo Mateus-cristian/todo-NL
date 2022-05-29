@@ -7,9 +7,7 @@
 
 # 📄 Instruções de Como rodar o projeto:
 
-### Esteja com banco de dados MySql rodando na sua máquina,Abra o projeto e na Raíz do projeto existe um arquivo chamado todonl.sql importe o mesmo para a sua base de dados.
-
-<br>
+### Se certifique de estrar com banco de dados MySql rodando na sua máquina,Abra o projeto e na Raíz do projeto existe um arquivo chamado todonl.sql importe o mesmo para a sua base de dados.
 
 ### Apos isso,abra o terminal na pasta raíz e execute:
 
