@@ -13,6 +13,11 @@ export const GlobalStyle = createGlobalStyle`
         --orange: #FF4001;
     }
 
+    body{
+    
+        min-height: 100%;
+    }
+
     h2::selection {
         color: white;
         background-color: var(--orange);
@@ -49,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    body,input,textarea,button{
+    body,input,textarea,button,h2,h3,p{
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
     }
@@ -105,4 +110,17 @@ export const GlobalStyle = createGlobalStyle`
             filter: brightness(0.5);
         }
     }
-`;
+    `;
+const lightTheme = {
+  body: "#e2e2e2",
+  text: "#363537",
+  toggleBorder: "#fff",
+  gradient: "linear-gradient(#39598A, #79D7ED)",
+};
+
+const darkTheme = {
+  body: "#363537",
+  text: "#FAFAFA",
+  toggleBorder: "#6B8096",
+  gradient: "linear-gradient(#091236, #1E215D)",
+};

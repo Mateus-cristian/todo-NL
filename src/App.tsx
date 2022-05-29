@@ -6,6 +6,7 @@ import TaskList from "./components/TaskList";
 import TaskModal from "./components/TaskModal";
 import Modal from "react-modal";
 import { TasksProvider } from "./TasksContext";
+import Footer from "./components/Footer";
 
 Modal.setAppElement("#root");
 function App() {
@@ -29,6 +30,7 @@ function App() {
         text={"Cadastrar"}
       />
       <GlobalStyle />
+      <Footer />
     </TasksProvider>
   );
 }
