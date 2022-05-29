@@ -42,7 +42,7 @@ export default function TaskTable() {
         <thead>
           <tr>
             <th>Titulo</th>
-            <th>Tarefa</th>
+            <th>Descrição</th>
             <th>Data</th>
             <th>Editar/Deletar</th>
           </tr>
