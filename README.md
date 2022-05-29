@@ -4,7 +4,6 @@
 
 <br>
 <br>
-<br>
 
 # 📄 Instruções de Como rodar o projeto:
 
@@ -24,7 +23,6 @@
 
 <br>
 <br>
-<br>
 
 # 🛠️ Funcionalidades do Projeto
 
@@ -41,32 +39,29 @@
 
 # 👨‍💻 Tecnologias Utilizadas e link de suas documentações
 
-### Biblioteca Frontend para criar a interface: [ReactJs](https://pt-br.reactjs.org/)
+#### Biblioteca Frontend para criar a interface: [ReactJs](https://pt-br.reactjs.org/)
 
-###
+#### Ambiente de execução Javascript do lado do servidor: [NodeJs](https://nodejs.org/en/)
 
-### Ambiente de execução Javascript do lado do servidor: [NodeJs](https://nodejs.org/en/)
+#### Banco de dados Usado: [MySql](https://www.mysql.com/)
 
-### Banco de dados Usado: [MySql](https://www.mysql.com/)
+#### Framework que oferece soluções para gerenciar requisições http em diferentes urls : [Express](https://expressjs.com/pt-br/)
 
-### Framework que oferece soluções para gerenciar requisições http em diferentes urls : [Express](https://expressjs.com/pt-br/)
+#### Biblioteca que reiniciar automaticamente o servidor: [Nodemon](https://www.npmjs.com/package/nodemon)
 
-### Biblioteca que reiniciar automaticamente o servidor: [Nodemon](https://www.npmjs.com/package/nodemon)
+#### Cliente HTTP baseado em Promises para fazer requisições: [Axios](https://axios-http.com/docs/api_intro)
 
-### Cliente HTTP baseado em Promises para fazer requisições: [Axios](https://axios-http.com/docs/api_intro)
+#### Biblioteca para ajudar na estilização: [Styled-components](https://styled-components.com/docs)
 
-### Biblioteca para ajudar na estilização: [Styled-components](https://styled-components.com/docs)
+#### Componente de Modal pronto: [React-modal](https://reactcommunity.org/react-modal/)
 
-### Componente de Modal pronto: [React-modal](https://reactcommunity.org/react-modal/)
+#### Biblioteca de notificações prontas: [React-toastify](https://fkhadra.github.io/react-toastify/introduction)
 
-### Biblioteca de notificações prontas: [React-toastify](https://fkhadra.github.io/react-toastify/introduction)
+#### Biblioteca de botão switch pronto: [React-switch](https://www.npmjs.com/package/react-switch)
 
-### Biblioteca de botão switch pronto: [React-switch](https://www.npmjs.com/package/react-switch)
-
-<br>
 <br>
 <br>
 
 #
 
-### Feito com carinho por [Mateus Cristian](https://www.linkedin.com/in/mateus-cristian-ferreira-de-paula-2520271a4/) ❤️
+#### Feito com carinho por [Mateus Cristian](https://www.linkedin.com/in/mateus-cristian-ferreira-de-paula-2520271a4/) ❤️
