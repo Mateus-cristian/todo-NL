@@ -5,16 +5,11 @@ import { TaskContext } from "../../TasksContext";
 import { Container } from "./styles";
 
 interface ModalProps {
-  text: string;
   isOpen: boolean;
   onRequestClose: () => void;
 }
 
-export default function TaskModal({
-  isOpen,
-  onRequestClose,
-  text,
-}: ModalProps) {
+export default function TaskModal({ isOpen, onRequestClose }: ModalProps) {
   const { createTask } = useContext(TaskContext);
 
   const [title, setTitle] = useState("");
@@ -43,7 +38,7 @@ export default function TaskModal({
       className="react-modal-content"
     >
       <Container onSubmit={handleCreateTask}>
-        <h2>{text} tarefa</h2>
+        <h2>Cadastrar tarefa</h2>
         <input
           required
           type="text"

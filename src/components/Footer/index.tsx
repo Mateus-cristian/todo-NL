@@ -16,7 +16,7 @@ export default function Footer({ toggleTheme }: toggleTheme) {
       <Switch
         onChange={toggleTheme}
         checked={title === "dark"}
-        offHandleColor="#000"
+        offHandleColor="#444"
         onHandleColor="#fff"
         checkedIcon={
           <p
@@ -27,7 +27,7 @@ export default function Footer({ toggleTheme }: toggleTheme) {
               zIndex: "100",
             }}
           >
-            🌞
+            🌑
           </p>
         }
         uncheckedIcon={
@@ -39,7 +39,7 @@ export default function Footer({ toggleTheme }: toggleTheme) {
               zIndex: "100",
             }}
           >
-            🌑
+            🌞
           </p>
         }
         offColor="#fff"

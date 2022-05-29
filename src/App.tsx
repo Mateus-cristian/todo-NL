@@ -33,11 +33,7 @@ function App() {
       <TasksProvider>
         <Header />
         <TaskList handleOpenModal={handleOpenModal} />
-        <TaskModal
-          isOpen={modalOpen}
-          onRequestClose={handleCloseModal}
-          text={"Cadastrar"}
-        />
+        <TaskModal isOpen={modalOpen} onRequestClose={handleCloseModal} />
         <GlobalStyle />
         <Footer toggleTheme={toggleTheme} />
       </TasksProvider>

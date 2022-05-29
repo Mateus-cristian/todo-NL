@@ -44,7 +44,7 @@ export function TasksProvider({ children }: TasksProvidersProps) {
   }
 
   async function createTask(tasksInputs: TasksProps) {
-    toast.success("🦄 Tarefa Criada com Sucesso!", {
+    toast.success("Tarefa Criada com Sucesso!", {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -61,7 +61,7 @@ export function TasksProvider({ children }: TasksProvidersProps) {
   }
 
   async function updatedTask(task: Tasks) {
-    toast.success("🦄 Tarefa Atualizada com Sucesso!", {
+    toast.success("Tarefa Atualizada com Sucesso!", {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,

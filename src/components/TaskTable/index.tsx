@@ -35,7 +35,6 @@ export default function TaskTable() {
       <UpdateTaskModal
         isOpen={modalOpen}
         onRequestClose={handleCloseModal}
-        text={"Editar"}
         task={selectedTask}
         setTask={setSelectedTask}
       />

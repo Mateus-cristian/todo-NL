@@ -11,20 +11,21 @@ export const Container = styled.div`
     margin-top: 5rem;
 
     th {
-      text-align: left;
+      text-align: center;
       color: ${(props) => props.theme.colors.th};
     }
 
     td {
-      padding: 1rem 2rem 1rem 0;
+      padding: 1rem 0rem 1rem 0;
       border: 0;
-
+      text-align: center;
       color: ${(props) => props.theme.colors.td};
       border-radius: 0.25rem;
 
       &:last-child {
         display: flex;
-        padding-left: 15px;
+        text-align: center;
+        justify-content: center;
         gap: 0 50px;
 
         svg {

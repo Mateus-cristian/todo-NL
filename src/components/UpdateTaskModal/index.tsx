@@ -4,7 +4,6 @@ import { TaskContext } from "../../TasksContext";
 import { Container } from "./styles";
 
 interface ModalProps {
-  text: string;
   isOpen: boolean;
   onRequestClose: () => void;
   task: Tasks;
@@ -21,7 +20,6 @@ interface Tasks {
 export default function UpdateTaskModal({
   isOpen,
   onRequestClose,
-  text,
   task: selected,
   setTask,
 }: ModalProps) {
@@ -43,7 +41,7 @@ export default function UpdateTaskModal({
       className="react-modal-content"
     >
       <Container onSubmit={handleUpdateTask}>
-        <h2>{text} tarefa</h2>
+        <h2>Editar tarefa</h2>
         <input
           required
           type="text"
