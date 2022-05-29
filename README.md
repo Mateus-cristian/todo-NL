@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# Todo NL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Um Crud de uma todo list onde pode se cadastrar uma tarefa com título,descrição e data.Feito em ReactJs no frontend,NodeJs no backend e usando MySql como Banco de dados.
 
-## Available Scripts
+<br>
+<br>
+<br>
 
-In the project directory, you can run:
+# 📄 Instruções de Como rodar o projeto:
 
-### `npm start`
+### Esteja com banco de dados MySql rodando na sua máquina,Abra o projeto e na Raíz do projeto existe um arquivo chamado todonl.sql importe o mesmo para a sua base de dados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Apos isso,abra o terminal na pasta raíz e execute:
 
-### `npm test`
+#### yarn install para instalar as dependências
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+### Aba uma nova aba no terminal e entre na pasta server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### rode npm run devStart para iniciar o servidor.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
+<br>
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 🛠️ Funcionalidades do Projeto
 
-### `npm run eject`
+<ul>
+<li>Tela principal onde pode ver tarefas cadastradas</li>
+<li>Botão para criar tarefa;</li>
+<li>Botão para editar tarefa;</li>
+<li>Botão para deletar tarefa;</li>
+<li>Botão para trocar o tema da tela para escuro ou claro.</li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 👨‍💻 Tecnologias Utilizadas e link de suas documentações
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Biblioteca Frontend para criar a interface: [ReactJs](https://pt-br.reactjs.org/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+###
 
-## Learn More
+### Ambiente de execução Javascript do lado do servidor: [NodeJs](https://nodejs.org/en/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Banco de dados Usado: [MySql](https://www.mysql.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Framework que oferece soluções para gerenciar requisições http em diferentes urls : [Express](https://expressjs.com/pt-br/)
+
+### Biblioteca que reiniciar automaticamente o servidor: [Nodemon](https://www.npmjs.com/package/nodemon)
+
+### Cliente HTTP baseado em Promises para fazer requisições: [Axios](https://axios-http.com/docs/api_intro)
+
+### Biblioteca para ajudar na estilização: [Styled-components](https://styled-components.com/docs)
+
+### Componente de Modal pronto: [React-modal](https://reactcommunity.org/react-modal/)
+
+### Biblioteca de notificações prontas: [React-toastify](https://fkhadra.github.io/react-toastify/introduction)
+
+### Biblioteca de botão switch pronto: [React-switch](https://www.npmjs.com/package/react-switch)
+
+<br>
+<br>
+<br>
+
+#
+
+### Feito com carinho por [Mateus Cristian](https://www.linkedin.com/in/mateus-cristian-ferreira-de-paula-2520271a4/) ❤️
