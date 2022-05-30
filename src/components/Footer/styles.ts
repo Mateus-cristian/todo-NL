@@ -21,7 +21,7 @@ export const Container = styled.div`
 
       &:hover {
         color: ${(props) => props.theme.colors.h2};
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
