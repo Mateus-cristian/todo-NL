@@ -10,11 +10,12 @@ import { ThemeProvider } from "styled-components";
 import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 import Footer from "./components/Footer";
+import UsePersistedState from "./utils/UsePersistedStateTheme";
 
 Modal.setAppElement("#root");
 function App() {
   const [modalOpen, setOpenModal] = useState(false);
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = UsePersistedState("theme", light);
 
   function toggleTheme() {
     setTheme(theme.title === "light" ? dark : light);

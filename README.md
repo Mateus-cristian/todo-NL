@@ -25,11 +25,13 @@
 
 #### rode yarn install para instalar as dependências
 
+#### rode yarn start para iniciar o projeto no lado do cliente
+
 ### Aba uma nova aba no terminal e entre na pasta server:
 
 #### rode yarn install para instalar as dependências
 
-#### rode npm run devStart para iniciar o servidor.
+#### rode yarn devStart para iniciar o servidor.
 
 <br>
 <br>
