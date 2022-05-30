@@ -2,7 +2,6 @@ import React, { FormEvent, useContext } from "react";
 import Modal from "react-modal";
 import { TaskContext } from "../../TasksContext";
 import { Container } from "./styles";
-
 interface ModalProps {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -64,7 +63,7 @@ export default function UpdateTaskModal({
           required
           type="date"
           placeholder="data"
-          value={selected.date || ""}
+          value={selected.date ? selected.date.slice(0, 10) : selected.date}
           max="9999-12-31"
           min="1920-01-01"
           onChange={(event) =>

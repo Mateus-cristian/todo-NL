@@ -1,4 +1,4 @@
-import React, { FormEvent, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container } from "./styles";
 import { BiTrash } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
