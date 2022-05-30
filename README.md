@@ -3,7 +3,6 @@
 #### Um Crud de uma todo list onde pode se cadastrar uma tarefa com título,descrição e data.Feito em ReactJs no frontend,NodeJs no backend e usando MySql como Banco de dados.
 
 <br>
-<br>
 
 # 💡 Requisitos para rodar o Projeto:
 
@@ -50,7 +49,7 @@
 
 # 👨‍💻 Tecnologias Utilizadas e link de suas documentações
 
-#### Biblioteca Frontend para criar a interface: [ReactJs](https://pt-br.reactjs.org/)
+#### Biblioteca Frontend para criação de interface: [ReactJs](https://pt-br.reactjs.org/)
 
 #### Ambiente de execução Javascript do lado do servidor: [NodeJs](https://nodejs.org/en/)
 
