@@ -24,9 +24,11 @@
 
 ### Apos isso,abra o terminal na pasta raíz e execute:
 
-#### yarn install para instalar as dependências
+#### rode yarn install para instalar as dependências
 
 ### Aba uma nova aba no terminal e entre na pasta server:
+
+#### rode yarn install para instalar as dependências
 
 #### rode npm run devStart para iniciar o servidor.
 
