@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-    
-        min-height: 100%;
+    position: relative;
+    min-height: 100vh;
     }
 
     h2::selection {

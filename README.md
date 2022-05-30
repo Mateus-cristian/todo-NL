@@ -5,6 +5,19 @@
 <br>
 <br>
 
+# 💡 Requisitos para rodar o Projeto:
+
+### yarn instalado: [link documentação](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
+
+### node versão mínima 16 instalado: [link documentação](https://nodejs.org/en/)
+
+### Banco MySql: [link documentação](https://www.mysql.com/)
+
+#### Obs:Pode se usar o banco sql do xampp;
+
+<br>
+<br>
+
 # 📄 Instruções de Como rodar o projeto:
 
 ### Se certifique de estar com banco de dados MySql rodando na sua máquina,Abra o projeto e na Raíz existe um arquivo chamado todonl.sql importe o mesmo para a sua base de dados.
@@ -12,7 +25,6 @@
 ### Apos isso,abra o terminal na pasta raíz e execute:
 
 #### yarn install para instalar as dependências
-
 
 ### Aba uma nova aba no terminal e entre na pasta server:
 

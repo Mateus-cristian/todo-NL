@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Maio-2022 às 00:41
+-- Tempo de geração: 30-Maio-2022 às 02:44
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `todonl`
 --
+
+-- Criação da base de dados
+CREATE DATABASE todonl;
 
 -- --------------------------------------------------------
 
@@ -41,9 +44,8 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `title`, `task`, `date`, `createdAt`, `updatedAt`) VALUES
-(204, 'teste', 'teste', '2020-12-21', '2022-05-29 20:34:07', '2022-05-29 20:34:07'),
-(205, 'teste', 'teste', '2020-12-21', '2022-05-29 20:46:32', '2022-05-29 20:46:32'),
-(206, 'teste123', 'testes123', '2001-12-12', '2022-05-29 20:47:51', '2022-05-29 20:47:51');
+(209, 'supermercado', 'comprar pão', '2022-05-29', '2022-05-30 00:43:54', '2022-05-30 00:43:54'),
+(210, 'estudar', 'react native', '2022-05-30', '2022-05-30 00:44:07', '2022-05-30 00:44:07');
 
 --
 -- Índices para tabelas despejadas
@@ -63,7 +65,7 @@ ALTER TABLE `tasks`
 -- AUTO_INCREMENT de tabela `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

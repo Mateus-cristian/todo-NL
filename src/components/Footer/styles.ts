@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 30px 25px;
-
+  position: absolute;
   margin-top: 10px;
   bottom: 0;
   background: ${(props) => props.theme.colors.backgroundSecondary};
