@@ -57,6 +57,8 @@ export default function TaskModal({ isOpen, onRequestClose }: ModalProps) {
           required
           type="date"
           placeholder="data"
+          max="9999-12-31"
+          min="1920-01-01"
           value={date}
           onChange={(event) => setDate(event.target.value)}
         />

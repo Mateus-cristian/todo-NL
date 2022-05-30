@@ -65,6 +65,8 @@ export default function UpdateTaskModal({
           type="date"
           placeholder="data"
           value={selected.date || ""}
+          max="9999-12-31"
+          min="1920-01-01"
           onChange={(event) =>
             setTask({ ...selected, date: event.target.value })
           }
