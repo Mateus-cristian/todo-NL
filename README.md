@@ -49,7 +49,7 @@
 
 # 👨‍💻 Tecnologias Utilizadas e link de suas documentações
 
-#### Biblioteca Frontend para criar a interface: [ReactJs](https://pt-br.reactjs.org/)
+#### Biblioteca Frontend para criação de interface: [ReactJs](https://pt-br.reactjs.org/)
 
 #### Ambiente de execução Javascript do lado do servidor: [NodeJs](https://nodejs.org/en/)
 
