@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Maio-2022 às 02:44
+-- Tempo de geração: 30-Maio-2022 às 03:24
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -20,9 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `todonl`
 --
-
--- Criação da base de dados
-CREATE DATABASE todonl;
+CREATE DATABASE IF NOT EXISTS `todonl` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `todonl`;
 
 -- --------------------------------------------------------
 

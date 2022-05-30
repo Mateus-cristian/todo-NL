@@ -12,7 +12,13 @@ export default function Footer({ toggleTheme }: toggleTheme) {
 
   return (
     <Container>
-      <h3>Feito por Mateus Cristian com todo amor e carinho ❤️</h3>
+      <h3>
+        Feito por &nbsp;
+        <a href="https://www.linkedin.com/in/mateus-cristian-ferreira-de-paula-2520271a4/">
+          Mateus Cristian
+        </a>
+        &nbsp;com todo amor e carinho ❤️
+      </h3>
       <Switch
         onChange={toggleTheme}
         checked={title === "dark"}

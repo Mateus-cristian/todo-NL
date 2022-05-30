@@ -14,5 +14,16 @@ export const Container = styled.div`
 
   h3 {
     color: ${(props) => props.theme.colors.h3};
+
+    a {
+      color: #fff;
+      transition: all 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        color: ${(props) => props.theme.colors.h2};
+        text-decoration: underline;
+      }
+    }
   }
 `;
