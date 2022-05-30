@@ -18,7 +18,6 @@ export const Container = styled.div`
     a {
       color: #fff;
       transition: all 0.3s;
-      text-decoration: none;
 
       &:hover {
         color: ${(props) => props.theme.colors.h2};
