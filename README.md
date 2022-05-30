@@ -43,7 +43,7 @@
 <li>Botão para criar tarefa;</li>
 <li>Botão para editar tarefa;</li>
 <li>Botão para deletar tarefa;</li>
-<li>Botão para trocar o tema da tela para escuro ou claro.</li>
+<li>Botão para trocar o tema da tela para escuro ou claro onde o mesmo é salvo no localStorage.</li>
 </ul>
 
 <br>
