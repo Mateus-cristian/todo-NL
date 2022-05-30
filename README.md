@@ -7,11 +7,11 @@
 
 # 💡 Requisitos para rodar o Projeto:
 
-### yarn instalado: [link documentação](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
+### yarn instalado: [link da documentação](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
 
-### node versão mínima 16 instalado: [link documentação](https://nodejs.org/en/)
+### node versão mínima 16 instalado: [link da documentação](https://nodejs.org/en/)
 
-### Banco MySql: [link documentação](https://www.mysql.com/)
+### Banco MySql: [link da documentação](https://www.mysql.com/)
 
 #### Obs:Pode se usar o banco sql do xampp;
 
